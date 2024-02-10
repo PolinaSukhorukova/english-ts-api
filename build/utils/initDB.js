@@ -10,8 +10,8 @@ const Book_1 = require("../models/Book");
 const IrregularVerb_1 = require("../models/IrregularVerb");
 const Level_1 = require("../models/Level");
 dotenv_1.default.config();
-let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-const url = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}:5432/${PGDATABASE}`;
+let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
+const url = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}`;
 console.log(url);
 const dbInit = () => {
     return new sequelize_typescript_1.Sequelize(url, {
