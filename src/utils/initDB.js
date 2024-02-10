@@ -8,7 +8,7 @@ dotenv.config();
 
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
 
-const url = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}`;
+const url = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}:5432/${PGDATABASE}`;
 console.log(url);
 
 export const dbInit = () => {
